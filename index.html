@@ -31,8 +31,12 @@
         }
     </style>
     <body>
-        <h1>LedgerRep</h1>
-        <p>XRPL Wallet Trust Score </p>
+        <div style="position:absolute; top:20px; right:20px;">
+  <button onclick="setLanguage('en')" style="background:none; border:1px solid #00b4d8; color:#00b4d8; padding:5px 10px; cursor:pointer; margin-right:5px;">EN</button>
+  <button onclick="setLanguage('jp')" style="background:none; border:1px solid #00b4d8; color:#00b4d8; padding:5px 10px; cursor:pointer;">JP</button>
+</div>
+        <h1 id="title">LedgerRep</h1>
+<p id="subtitle">XRPL Wallet Trust Score</p>
         <input id="walletInput" placeholder="Enter Wallet address"/>
         <button id="scoreBtn">Check Score</button>
         <div id="result" style="margin-top:30px;"></div>
