@@ -60,11 +60,15 @@ else recommendation = "🚫 Do Not Send Funds"
 // Grade
 var newWalletWarning = ""
 if (ageInDays < 30) {
-  newWalletWarning = "<div style='background:#2a1a1a; border:1px solid #ff4444; padding:15px; border-radius:10px; margin-bottom:15px;'>" +
-    "<p style='color:#ff4444; font-size:16px;'>🆕 New Wallet Detected</p>" +
-    "<p style='color:white; font-size:14px;'>This wallet is less than 30 days old — not enough history for a full trust score</p>" +
-    "<p style='color:#00b4d8; font-size:14px;'>💡 Consider asking for their primary wallet address or request a small test transaction first</p>" +
-    "</div>"
+  newWalletWarning = "<div style='background:#1a0a0a; border:1px solid #ff4444; padding:15px; border-radius:10px; margin-bottom:15px; text-align:left;'>" +
+    "<p style='color:#ff4444; font-size:16px; margin:0 0 10px 0;'>🆕 New Wallet Detected</p>" +
+    "<p style='color:white; font-size:14px; margin:0 0 10px 0;'>This wallet is " + ageInDays + " days old — limited history available</p>" +
+    "<p style='color:#00b4d8; font-size:14px; margin:0 0 5px 0;'>💡 Suggestions:</p>" +
+    "<p style='color:#ccc; font-size:13px; margin:0 0 3px 0;'>• Ask for their primary wallet address</p>" +
+    "<p style='color:#ccc; font-size:13px; margin:0 0 3px 0;'>• Request a small test transaction first</p>" +
+    "<p style='color:#ccc; font-size:13px; margin:0 0 3px 0;'>• Check their social proof on X or Discord</p>" +
+"<p style='color:#ccc; font-size:13px; margin:0;'>• Use an escrow service for high value deals</p>" +
+"</div>"
 }
     document.getElementById("result").innerHTML = 
     newWalletWarning +
