@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PX06989YLC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PX06989YLC');
+    </script>
+    <meta charset="UTF-8">
         <meta charset="UTF-8">
         <script src="https://unpkg.com/xrpl@4.6.0/build/xrpl-latest-min.js"></script>
         <title>LedgerRep</title>
@@ -26,7 +35,7 @@
         <p>XRPL Wallet Trust Score </p>
         <input id="walletInput" placeholder="Enter Wallet address"/>
         <button id="scoreBtn">Check Score</button>
-        <p id="result" style="color:#00b4d8; margin-top:20px; font-size:18px;"></p>
+        <div id="result" style="margin-top:30px;"></div>
     
    
     </body>
